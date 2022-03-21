@@ -16,9 +16,16 @@ author: arnaudjaffrennou
 Le Marathon, l’épreuve reine fêtera sa 40ème édition où plein de surprises vous attendent.
 Les 16 et 17 avril 2022, l’événement revient dans son intégralité avec les 4 courses habituelles :
 - Les Foulées de l’éléphant by Decathlon, 10 km Nocturne dans le coeur de ville, sur un parcours testé et approuvé lors de l’édition spéciale de novembre 2021
-- Le Marathon, l’épreuve reine fêtera sa 40ème édition où plein de surprises vous attendent
 - Le Marathon Relais Entreprises, par équipes de 4, un beau défi à réaliser entre collègues
 - Le Semi-Marathon, l’occasion de battre un nouveau chrono !
+- Le Marathon, l’épreuve reine fêtera sa 40ème édition où plein de surprises vous attendent
+
+Site marathon de Nantes pour plus d'informqation cliquer [ici](https://github.com/Hypejaff/STUDYFLOW)!
+## Le parcours du matahon de Nantes
+<embed src="/assets/img/picture/parcours_officiel_marathon2022.pdf" width="100%" height="600px"/>
+Dénivelé : Total positif = 207 mètres | Total négatif = 203 mètres | Altitude maximale : 37 mètres
+
+Le parcours a été mesuré par des officiels FFA et fait bien 42,195KM.
 
 ## Plan marathon en 3 heures
 <table>

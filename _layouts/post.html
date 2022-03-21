@@ -18,14 +18,17 @@
                     <svg id="clock" class="icon-clock"><use xlink:href="#icon-clock"></use></svg>
                     <span>{{ minutesText }}</span>
                 </p>
-                <h1 class="post-title">{{ page.title }}</h1>
-                <p class="post-subtitle">{{ page.subtitle }}</p>
-
-                {% if page.image and page.show_image and paginator.activated == nil %}
-                    <img src="{{ page.image }}" alt="Featured image" class="post-cover">
+                {% if paginator.is_first != true %}
+                    {% include pagination-post.html progressBar=true %}
                 {% endif %}
+                {% if paginator.is_first or paginator.activated == nil%}
+                    <h1 class="post-title">{{ page.title }}</h1>
+                    <p class="post-subtitle">{{ page.subtitle }}</p>
 
-                {% include pagination-post.html progressBar=true %}
+                    {% if page.image and page.show_image %}
+                        <img src="{{ page.image }}" alt="Featured image" class="post-cover">
+                    {% endif %}
+                {% endif %}
 
                 {% include toc.html %}
 
@@ -68,7 +71,7 @@
 
         <!-- Show modal if the post is the last one -->
         {% if paginator.is_last and site.show_modal_on_finish_post %}
-            {% include modal.html title="You made it!" subtitle="Why don't you try another?" %}
+            {% include modal.html title="Encore un post!" subtitle="Pourquoi ne pas en essayer un autre ?" %}
         {% endif %}
 
         <!-- Show modal before user leaves the page -->
@@ -87,15 +90,6 @@
         {% assign author_urls = '' %}
         {% if author.github_username %}
             {% assign author_urls = author_urls | append: '"https://github.com/' | append: author.github_username | append: '",' %}
-        {% endif %}
-        {% if author.facebook_username %}
-            {% assign author_urls = author_urls | append: '"https://www.facebook.com/' | append: author.facebook_username | append: '",' %}
-        {% endif %}
-        {% if author.twitter_username %}
-            {% assign author_urls = author_urls | append: '"https://twitter.com/' | append: author.twitter_username | append: '",' %}
-        {% endif %}
-        {% if author.medium_username %}
-            {% assign author_urls = author_urls | append: '"https://medium.com/@' | append: author.medium_username | append: '",' %}
         {% endif %}
         {% if author.instagram_username %}
             {% assign author_urls = author_urls | append: '"https://www.instagram.com/' | append: author.instagram_username | append: '",' %}
@@ -160,6 +154,18 @@
             "articleSection": "{{ page.category }}",
             "keywords": [{{ page.tags | join: '","' | append: '"' | prepend: '"' }}]
         }
+        </script>
+        <script>
+            const show_posts_modal_button = document.getElementById('show_posts_modal_button');
+            if(show_posts_modal_button){
+                show_posts_modal_button.addEventListener("click", function(e){
+                    e.preventDefault();
+                    const modal_posts = document.getElementById('modal_posts');
+                    if(modal_posts){
+                        modal_posts.classList.remove('closed');
+                    }
+                })
+            }
         </script>
     </body>
 </html>

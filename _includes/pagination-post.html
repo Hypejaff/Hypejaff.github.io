@@ -9,8 +9,8 @@
                 {% endif %}
                 <span class="text">{{ site.translations.pagination.next_page | default: "Next Page" }} <svg class="arrow"><use xlink:href="#icon-arrow-right"></use></svg></span>
             </a>
-        {% else if next_posts.first %}
-            <a href="{{ next_posts.first.url }}">
+        {% else %}
+            <a href="#" id="show_posts_modal_button">
                 {% if include.progressBar %}
                     {% include progress-bar.html finished=true %}
                 {% endif %}
