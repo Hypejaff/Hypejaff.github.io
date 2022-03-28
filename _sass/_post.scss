@@ -203,7 +203,7 @@
   }
   h1 {
     font-size: rem(36px);
-    line-height: 1.4;
+    line-height: 1.0;
     @include media(">=sm") {
       font-size: rem(50px);
     }
@@ -211,7 +211,7 @@
 
   h2 {
     font-size: rem(28px);
-    line-height: 1.4;
+    line-height: 0.5;
 
     @include media(">=sm") {
       font-size: rem(37px);
@@ -220,7 +220,7 @@
 
   h3 {
     font-size: rem(22px);
-    line-height: 1.4;
+    line-height: 0.0;
 
     @include media(">=sm") {
       font-size: rem(27px);

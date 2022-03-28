@@ -1,6 +1,7 @@
 ---
 date: 2017-11-29T23:00:00.000Z
 layout: post
+show_post: true
 title: STUDYFLOW
 subtitle: StudyFlow est une application mobile et web qui permet à des parents de suivre les cours particuliers de leur(s) enfant(s).
 description: 
