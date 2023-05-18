@@ -8,7 +8,7 @@ description: En route vers la 40ème édition de l’Abalone Marathon de Nantes 
 image: /assets/img/picture/challenge-marathon.jpg
 optimized_image: /assets/img/picture/challenge-marathon.jpg
 show_image: false
-category: Vie
+category: vie
 tags:
   - Sport
   - Running
